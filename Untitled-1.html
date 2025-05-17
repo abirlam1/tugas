@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub-Themed Website</title>
+    <style>
+        body {
+            background-color: #0d1117;
+            color: #c9d1d9;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #161b22;
+            padding: 10px 20px;
+            border-bottom: 1px solid #30363d;
+        }
+
+        nav a {
+            color: #c9d1d9;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            color: #58a6ff;
+        }
+
+        #sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 250px;
+            background-color: #161b22;
+            border-right: 1px solid #30363d;
+            padding: 20px;
+            transform: translateX(-100%);
+            transition: transform 0.3s;
+        }
+
+        #sidebar a {
+            display: block;
+            color: #c9d1d9;
+            text-decoration: none;
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        #sidebar a:hover {
+            color: #58a6ff;
+        }
+
+        #toggleButton {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background-color: #238636;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            color: #58a6ff;
+            margin-top: 20px;
+        }
+
+        p {
+            text-align: center;
+            font-size: 1em;
+            color: #8b949e;
+        }
+
+        button {
+            background-color: #238636;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #2ea043;
+        }
+
+        video {
+            display: block;
+            margin: 20px auto;
+            border: 1px solid #30363d;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div>
+            <a href="tugas1.html">Home</a>
+            <a href="#menu">Menu</a>
+            <a href="#fasilitas">Fasilitas</a>
+        </div>
+    </nav>
+
+    <button id="toggleButton" onclick="toggleSidebar()" style="position: absolute; top: 60px; left: 20px;">☰ Menu</button>
+
+    <div id="sidebar">
+        <a href="javascript:void(0)" onclick="toggleSidebar()">Close</a>
+        <a href="tugas1.html">Home</a>
+        <a href="#menu1">Menu 1</a>
+        <a href="#menu2">Menu 2</a>
+        <a href="#menu3">Menu 3</a>
+        <a href="#fasilitas">Fasilitas</a>
+    </div>
+
+    <h1>🌟 TUGAS KELAS PEMINATAN 🌟</h1>
+    <p>Selamat datang di tugas kelas peminatan! 🎉</p>
+
+    <div style="text-align: center; margin-top: 20px;">
+        <img src="download.png" alt="image" style="max-width: 500px; border: 1px solid #30363d; border-radius: 10px;">
+        <p>Ini adalah gambar YouTube</p>
+    </div>
+
+    <div style="text-align: center; margin-top: 20px;">
+        <a href="https://youtube.com" style="text-decoration: none;">
+            <button>Tonton YouTube!</button>
+        </a>
+    </div>
+
+    <div style="text-align: center; margin-top: 20px;">
+        <video controls style="width: 80%;">
+            <source src="./vancouver sleep clinic - someone to stay (audio).mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <p>Enjoy the video!</p>
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            if (sidebar.style.transform === 'translateX(0px)') {
+                sidebar.style.transform = 'translateX(-100%)';
+            } else {
+                sidebar.style.transform = 'translateX(0px)';
+            }
+        }
+    </script>
+</body>
+</html>
